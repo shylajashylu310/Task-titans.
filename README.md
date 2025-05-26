@@ -1,4 +1,4 @@
-This is C++ Program:
+//Write a C++ Program:
 
 #include <iostream>
 #include <fstream>
@@ -164,3 +164,34 @@ int main() {
 
     return 0;
 }
+
+//Write a c++ program on bank:
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+using namespace std;
+
+class BankAccount {
+    int accountNumber;
+    char name[50];
+    char accountType;
+    float balance;
+
+public:
+    void createAccount() {
+        cout << "Enter Account Number: ";
+        cin >> accountNumber;
+        cin.ignore();
+        cout << "Enter Account Holder Name: ";
+        cin.getline(name, 50);
+        cout << "Enter Account Type (S for Savings / C for Current): ";
+        cin >> accountType;
+        cout << "Enter Initial Deposit (>=500 for Savings, >=1000 for Current): ";
+        cin >> balance;
+        cout << "\nAccount Created Successfully!\n";
+    }
+
+    void showAccount() const {
+        cout << "\nAccount No: " << accountNumber;
+        cout << "\nName: " << name;
+        cout << "\nType: "
